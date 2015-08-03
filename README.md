@@ -17,6 +17,7 @@ var assert = require('assert');
 var dao = new ThingerDAO(new Adaptor('./thinger-db'));
 var thingy = { type: 'great band' };
 
+// uses Bluebird's .nodeify(), so callback or promise chain are fine
 dao.save(thingy, function (err) {
   if (err) throw err;
 
