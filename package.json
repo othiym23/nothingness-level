@@ -32,10 +32,10 @@
   "homepage": "https://github.com/othiym23/nothingness-level#readme",
   "dependencies": {
     "level": "^1.3.0",
-    "nothingness": "0.0.2"
+    "nothingness": "0.0.3"
   },
   "peerDependencies": {
-    "nothingness": "0.0.2"
+    "nothingness": "0.0.3"
   },
   "devDependencies": {
     "babel": "^5.8.20",
