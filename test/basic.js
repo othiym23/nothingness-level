@@ -6,7 +6,7 @@ var rimraf = require('rimraf')
 var test = require('tap').test
 var uuid = require('node-uuid').v4
 
-var Adaptor = require('..')
+var Adaptor = require('..').default
 
 var testDBpath = join(__dirname, 'readme-example')
 var testDBfile = join(testDBpath, 'test.leveldb')
