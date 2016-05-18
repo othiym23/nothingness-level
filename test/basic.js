@@ -11,7 +11,7 @@ var Adaptor = require('..').default
 var testDBpath = join(__dirname, 'readme-example')
 var testDBfile = join(testDBpath, 'test.leveldb')
 
-var DAO = require('nothingness')
+var DAO = require('nothingness').default
 function ThingerDAO (db) {
   DAO.call(this, db)
 }
