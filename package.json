@@ -6,7 +6,7 @@
   "jsnext:main": "src/adaptor.js",
   "scripts": {
     "transpile": "babel src -d lib",
-    "test": "standard && npm run transpile && tap test/*.js",
+    "test": "standard && npm run transpile && tap --coverage test/*.js",
     "prepublish": "npm run transpile",
     "preversion": "npm test"
   },
