@@ -1,4 +1,5 @@
 # @nothingness/level
+
 Minimal / simplistic / incomplete / bad adaptor to connect level to [`nothingness`](http://npm.im/nothingness).
 
 ## install
@@ -35,7 +36,26 @@ dao.save(thingy, function (err) {
 });
 ```
 
+## API
+
+### new Adaptor(pathToLevelDB)
+
+Connect the Adaptor to a LevelDB data directory; assumes that all values will be encoded as JSON.
+
+### save(key, value, cb)
+
+Maps to the `put` function for `levelup`; assumes that key generation and object preparation is handled elsewhere.
+
+### findAll(cb)
+
+Load all of the values in the collection. Override this unless you're only storing one type of value per LevelDB database.
+
+### closeDB(cb)
+
+Maps to the `close` function for `levelup`.
+
 ## caveats
+
 This is pre-1.0.0 software, and I'm going to keep iterating on this and `nothingness` until I have the basic CRUD logic and simple finders worked out for both sides in a way that doesn't make me want to barf. Getting this done in a way that keeps the coupling level right is tricky.
 
 It may take a little while given my other commitments, so don't be surprised if this doesn't go anywhere interesting for a while.

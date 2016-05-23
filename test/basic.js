@@ -28,7 +28,35 @@ test('setup', function (t) {
 })
 
 test('simple example from the README', function (t) {
-  t.plan(3)
+  var adaptor = new Adaptor(testDBfile)
+  var dao = new ThingerDAO(adaptor)
+  var thingy = {
+    type: 'great band'
+  }
+
+  dao.save(thingy, function (err) {
+    t.ifError(err, 'saving should have worked')
+
+    dao.findAll(function (err, results) {
+      t.ifError(err, 'fetching should have worked')
+
+      t.deepEqual(
+        results,
+        [{ type: 'great band' }],
+        'should only have one item, of type "great band"'
+      )
+
+      adaptor.closeDB(function (err) {
+        t.ifErr(err, 'database closed OK')
+
+        t.end()
+      })
+    })
+  })
+})
+
+test('closing the database works', function (t) {
+  setup()
 
   var dao = new ThingerDAO(new Adaptor(testDBfile))
   var thingy = {

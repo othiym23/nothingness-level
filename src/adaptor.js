@@ -22,4 +22,8 @@ export default class Adaptor {
       .on('end', function () { cb(null, results) })
       .on('error', cb)
   }
+
+  closeDB (cb) {
+    this.db.close(cb)
+  }
 }
