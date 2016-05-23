@@ -32,10 +32,10 @@
   "homepage": "https://github.com/othiym23/nothingness-level#readme",
   "dependencies": {
     "level": "^1.4.0",
-    "nothingness": "0.0.4"
+    "nothingness": "^0.1.0"
   },
   "peerDependencies": {
-    "nothingness": "0.0.4"
+    "nothingness": "^0.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
