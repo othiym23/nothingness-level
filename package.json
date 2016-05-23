@@ -1,6 +1,6 @@
 {
   "name": "@nothingness/level",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Water seeks its own level; without not-water we cannot be wet.",
   "main": "lib/adaptor.js",
   "jsnext:main": "src/adaptor.js",
